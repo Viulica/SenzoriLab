@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.sensor.grpc";
+option java_outer_classname = "SensorServiceProto";
+
+package sensor;
+
+service SensorService {
+  rpc RequestReadings (SensorIdRequest) returns (SensorReadingsResponse) {}
+  rpc SendReadings (SensorReadingsRequest) returns (SensorReadingsResponse) {}
+}
+
+message SensorIdRequest {
+  int64 id = 1;
+}
+
+message SensorReadingsRequest {
+  int64 id = 1;
+  double temperature = 2;
+  double pressure = 3;
+  double humidity = 4;
+  double co = 5;
+  double no2 = 6;
+  double so2 = 7;
+}
+
+message SensorReadingsResponse {
+  int64 id = 1;
+  bool success = 2;
+  double temperature = 3;
+  double pressure = 4;
+  double humidity = 5;
+  double co = 6;
+  double no2 = 7;
+  double so2 = 8;
+}
