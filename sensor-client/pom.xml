@@ -11,9 +11,9 @@
 	</parent>
 
 	<groupId>com.sensor</groupId>
-	<artifactId>sensor-backend</artifactId>
+	<artifactId>sensor-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sensor-backend</name>
+	<name>sensor-client</name>
 	<description>labos1</description>
 
 	<properties>
@@ -23,7 +23,6 @@
 	</properties>
 
 	<dependencies>
-		<!-- Spring dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -42,7 +41,6 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- Retrofit and OkHttp -->
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>logging-interceptor</artifactId>
@@ -61,21 +59,18 @@
 			<version>2.9.0</version>
 		</dependency>
 
-		<!-- Database -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
-		<!-- gRPC dependencies -->
 		<dependency>
 			<groupId>io.grpc</groupId>
 			<artifactId>grpc-netty-shaded</artifactId>
@@ -131,13 +126,11 @@
 			</extension>
 		</extensions>
 		<plugins>
-			<!-- Spring Boot Plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-			<!-- Protobuf Maven Plugin -->
 			<plugin>
 				<groupId>org.xolstice.maven.plugins</groupId>
 				<artifactId>protobuf-maven-plugin</artifactId>
